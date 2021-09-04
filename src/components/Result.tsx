@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from './atmos/Button';
+import { Button } from './atoms/Button';
 
 export const Result = () => {
 	return (
 		<div>
 			<img alt="あなたに合う国の男性写真サンプル" />
-			<p>セツメイ</p>
+			<p>アメリカですう</p>
 			<Button />
 		</div>
 	);

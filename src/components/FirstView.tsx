@@ -1,6 +1,6 @@
 // TODO: 命名
 
-import { Button } from './atmos/Button';
+import { Button } from './atoms/Button';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormGroup from '@material-ui/core/FormGroup';
