@@ -25,51 +25,66 @@ export const FirstView = ({
 }: Props) => {
 	return (
 		<div>
-			<div>Lets find your MOTE-country together</div>
-			<p>
-				モテない。。。。。。。。。そんなあなたに！！！あなたがモテモテになる国を見つけましょう！
+			<div className="w-auto h-auto p-4 bg-gray-800">
+				<h2 className="font-pacifico text-4xl uppercase text-lightenPink stroke-2 text-shadow-md ">
+					Lets find your MOTE-country
+				</h2>
+			</div>
+			<p className="mt-2">
+				モテない
+				<br />
+				なんてことは絶対ありません。質問に２つ答えるだけであなたのモテ期を始めましょう。
 			</p>
 			<form>
 				<FormControl component="fieldset" error={error}>
-					<FormLabel component="legend">１番近い体格を選んでください</FormLabel>
-					<RadioGroup onChange={(e) => setFirstNumber(e.target.value)}>
-						{/* ハートもできる */}
-						<FormControlLabel
-							control={<Radio />}
-							label="細め"
-							name="slender"
-							value="1"
-						/>
-						<FormControlLabel
-							control={<Radio />}
-							label="ぽっちゃり"
-							name="chubby"
-							value="2"
-						/>
-						<FormControlLabel
-							control={<Radio />}
-							label="グラマラス"
-							name="glamorous"
-							value="3"
-						/>
-					</RadioGroup>
-					<FormLabel component="legend">１番近い性格を選んでください</FormLabel>
-					<RadioGroup onChange={(e) => setSecondNumber(e.target.value)}>
-						<FormControlLabel
-							control={<Radio />}
-							label="知的"
-							name="smart"
-							value="10"
-						/>
-						<FormControlLabel control={<Radio />} label="陽気" value="20" />
-						<FormControlLabel control={<Radio />} label="家庭的" value="30" />
-						{error && (
-							<FormHelperText>
-								必ず体格と性格を１つずつ選択してください
-							</FormHelperText>
-						)}
-					</RadioGroup>
-					<Button onClick={onClick} />
+					<div className="my-8">
+						<FormLabel component="legend" className="mt-2">
+							１番近い体格を選んでください
+						</FormLabel>
+						<RadioGroup onChange={(e) => setFirstNumber(e.target.value)}>
+							{/* ハートもできる */}
+							<FormControlLabel
+								control={<Radio />}
+								label="細め"
+								name="slender"
+								value="1"
+							/>
+							<FormControlLabel
+								control={<Radio />}
+								label="ぽっちゃり"
+								name="chubby"
+								value="2"
+							/>
+							<FormControlLabel
+								control={<Radio />}
+								label="グラマラス"
+								name="glamorous"
+								value="3"
+							/>
+						</RadioGroup>
+						<FormLabel component="legend" className="mt-4">
+							１番近い性格を選んでください
+						</FormLabel>
+						<RadioGroup
+							onChange={(e) => setSecondNumber(e.target.value)}
+							className="mt-2"
+						>
+							<FormControlLabel
+								control={<Radio />}
+								label="知的"
+								name="smart"
+								value="10"
+							/>
+							<FormControlLabel control={<Radio />} label="陽気" value="20" />
+							<FormControlLabel control={<Radio />} label="家庭的" value="30" />
+							{error && (
+								<FormHelperText>
+									必ず体格と性格を１つずつ選択してください
+								</FormHelperText>
+							)}
+						</RadioGroup>
+					</div>
+					<Button onClick={onClick} label={'モテにいく'} />
 				</FormControl>
 			</form>
 		</div>

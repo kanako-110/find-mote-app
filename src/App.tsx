@@ -62,7 +62,7 @@ function App() {
 	}, [firstNumber, secondNumber]);
 
 	return (
-		<div>
+		<div className="p-16 text-center">
 			{!isOpen ? (
 				<FirstView
 					onClick={handleClick}
