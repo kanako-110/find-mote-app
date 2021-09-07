@@ -48,6 +48,8 @@ function App() {
 	const [isSubmtted, setIsSubmitted] = useState(false);
 	const [firstNumber, setFirstNumber] = useState<string>('');
 	const [secondNumber, setSecondNumber] = useState<string>('');
+	console.log({ firstNumber });
+	console.log({ secondNumber });
 
 	const choicesNumber = firstNumber + secondNumber;
 	console.log(COUNTRY_CHOICE_MAP[choicesNumber]);
@@ -56,27 +58,13 @@ function App() {
 		setIsSubmitted(true);
 	}, []);
 
-	const handleChangeOnFirst = (event: React.ChangeEvent<HTMLInputElement>) => {
-		// setFirstChoice({
-		// 	...firstChoice,
-		// 	[event.target.name]: event.target.checked,
-		// });
-
-		// TODO:better way
-		setFirstNumber(event.target.value);
-	};
-
-	const handleChangeOnSecond = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setSecondNumber(event.target.value);
-	};
-
 	return (
 		<div>
 			{!isSubmtted ? (
 				<FirstView
 					onClick={handleClick}
-					onChangeFirst={handleChangeOnFirst}
-					onChangeSecond={handleChangeOnSecond}
+					setFirstNumber={setFirstNumber}
+					setSecondNumber={setSecondNumber}
 				/>
 			) : (
 				<Result result={COUNTRY_CHOICE_MAP[choicesNumber]} />
