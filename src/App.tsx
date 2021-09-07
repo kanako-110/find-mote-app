@@ -19,7 +19,7 @@ const COUNTRY_CHOICE_MAP: MapType = {
 		country: 'Poland',
 	},
 	130: {
-		country: 'America and Canada',
+		country: 'Russia',
 	},
 
 	210: {
@@ -31,13 +31,13 @@ const COUNTRY_CHOICE_MAP: MapType = {
 	},
 
 	230: {
-		country: 'Brazil',
+		country: 'India',
 	},
 	310: {
-		country: 'Russia',
+		country: 'America and Canada',
 	},
 	320: {
-		country: 'India',
+		country: 'Brazil',
 	},
 	330: {
 		country: 'Thai, Nepal',
@@ -48,15 +48,20 @@ function App() {
 	const [isSubmtted, setIsSubmitted] = useState(false);
 	const [firstNumber, setFirstNumber] = useState<string>('');
 	const [secondNumber, setSecondNumber] = useState<string>('');
-	console.log({ firstNumber });
-	console.log({ secondNumber });
+	const [error, setError] = React.useState(false);
 
 	const choicesNumber = firstNumber + secondNumber;
 	console.log(COUNTRY_CHOICE_MAP[choicesNumber]);
 
 	const handleClick = useCallback(() => {
-		setIsSubmitted(true);
-	}, []);
+		if (!firstNumber || !secondNumber) {
+			setError(true);
+			return;
+		}
+
+		// isOpen?
+		return setIsSubmitted(true);
+	}, [firstNumber, secondNumber]);
 
 	return (
 		<div>
@@ -65,6 +70,7 @@ function App() {
 					onClick={handleClick}
 					setFirstNumber={setFirstNumber}
 					setSecondNumber={setSecondNumber}
+					error={error}
 				/>
 			) : (
 				<Result result={COUNTRY_CHOICE_MAP[choicesNumber]} />
