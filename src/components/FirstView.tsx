@@ -23,23 +23,12 @@ export const FirstView = ({
 	setSecondNumber,
 	error,
 }: Props) => {
-	// const [firstChoice, setFirstChoice] = useState({
-	// 	slender: false,
-	// 	chubby: false,
-	// 	glamorous: false,
-	// });
-
-	// const { slender, chubby, glamorous } = firstChoice;
-	// const error = [slender, chubby, glamorous].filter((v) => v).length !== 1;
-
 	return (
 		<div>
 			<div>Lets find your MOTE-country together</div>
 			<p>
 				モテない。。。。。。。。。そんなあなたに！！！あなたがモテモテになる国を見つけましょう！
 			</p>
-			{/* TODO 2個以上、2個以下 えらー */}
-			{/* フォームで囲むべきか */}
 			<form>
 				<FormControl component="fieldset" error={error}>
 					<FormLabel component="legend">１番近い体格を選んでください</FormLabel>
