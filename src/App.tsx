@@ -45,13 +45,12 @@ const COUNTRY_CHOICE_MAP: MapType = {
 };
 
 function App() {
-	const [isSubmtted, setIsSubmitted] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 	const [firstNumber, setFirstNumber] = useState<string>('');
 	const [secondNumber, setSecondNumber] = useState<string>('');
 	const [error, setError] = React.useState(false);
 
 	const choicesNumber = firstNumber + secondNumber;
-	console.log(COUNTRY_CHOICE_MAP[choicesNumber]);
 
 	const handleClick = useCallback(() => {
 		if (!firstNumber || !secondNumber) {
@@ -59,13 +58,12 @@ function App() {
 			return;
 		}
 
-		// isOpen?
-		return setIsSubmitted(true);
+		setIsOpen(true);
 	}, [firstNumber, secondNumber]);
 
 	return (
 		<div>
-			{!isSubmtted ? (
+			{!isOpen ? (
 				<FirstView
 					onClick={handleClick}
 					setFirstNumber={setFirstNumber}
