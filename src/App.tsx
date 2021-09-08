@@ -22,7 +22,7 @@ function App() {
 	}, [firstNumber, secondNumber]);
 
 	return (
-		<div className="p-16 flex justify-center align-middle text-center">
+		<div className="px-16 py-6 flex justify-center align-middle text-center sm:py-16 ">
 			{!isOpen ? (
 				<FirstView
 					onClick={handleClick}

@@ -3,6 +3,7 @@ import { Button } from './atoms/Button';
 import { resultType } from '../data';
 import { IconButton } from '@material-ui/core';
 import { default as BackIcon } from '@material-ui/icons/Replay';
+
 interface Props {
 	result: resultType;
 	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -22,7 +23,13 @@ export const Result = ({ result, setIsOpen }: Props) => {
 			</h2>
 			<p className="mt-6">{result.description} </p>
 			<div className="mt-6 text-center flex flex-col">
-				<Button label={'会いに行く'} variant={'contained'} />
+				<a href={result.link}>
+					<Button
+						label={'会いに行く'}
+						variant={'contained'}
+						className="w-full"
+					/>
+				</a>
 				<div className="mt-6">
 					<IconButton
 						onClick={() => setIsOpen(false)}

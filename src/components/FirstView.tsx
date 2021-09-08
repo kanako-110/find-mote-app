@@ -29,7 +29,7 @@ export const FirstView = ({
 		<div>
 			<div className="w-auto h-auto p-4 bg-gray-800">
 				{/* TODO: text-color */}
-				<h1 className="font-pacifico text-4xl uppercase text-red-600 stroke-2 text-shadow-md ">
+				<h1 className="font-pacifico text-3xl uppercase text-red-600 stroke-2 text-shadow-md sm:text-4xl ">
 					Lets find your MOTE-country
 				</h1>
 			</div>
