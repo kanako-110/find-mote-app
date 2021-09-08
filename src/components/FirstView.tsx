@@ -24,13 +24,15 @@ export const FirstView = ({
 	error,
 }: Props) => {
 	return (
+		// TODO:  mapにして、上から情報わたすだけにする。
+		//  それを２つ置くだけ。
 		<div>
 			<div className="w-auto h-auto p-4 bg-gray-800">
-				<h2 className="font-pacifico text-4xl uppercase text-lightenPink stroke-2 text-shadow-md ">
+				<h1 className="font-pacifico text-4xl uppercase text-lightenPink stroke-2 text-shadow-md ">
 					Lets find your MOTE-country
-				</h2>
+				</h1>
 			</div>
-			<p className="mt-2">
+			<p className="mt-6">
 				モテない
 				<br />
 				なんてことは絶対ありません。質問に２つ答えるだけであなたのモテ期を始めましょう。
@@ -84,7 +86,11 @@ export const FirstView = ({
 							)}
 						</RadioGroup>
 					</div>
-					<Button onClick={onClick} label={'モテにいく'} />
+					<Button
+						onClick={onClick}
+						label={'モテにいく'}
+						variant={'contained'}
+					/>
 				</FormControl>
 			</form>
 		</div>

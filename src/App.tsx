@@ -2,47 +2,7 @@ import React, { useState } from 'react';
 import { Result } from './components/Result';
 import { useCallback } from 'react';
 import { FirstView } from './components/FirstView';
-
-export type resultType = {
-	country: string;
-};
-
-interface MapType {
-	[key: string]: resultType;
-}
-
-const COUNTRY_CHOICE_MAP: MapType = {
-	110: {
-		country: 'China',
-	},
-	120: {
-		country: 'Poland',
-	},
-	130: {
-		country: 'Russia',
-	},
-
-	210: {
-		country: 'Italy',
-	},
-
-	220: {
-		country: 'Samoa',
-	},
-
-	230: {
-		country: 'India',
-	},
-	310: {
-		country: 'America and Canada',
-	},
-	320: {
-		country: 'Brazil',
-	},
-	330: {
-		country: 'Thai, Nepal',
-	},
-};
+import { COUNTRY_CHOICE_MAP } from './data';
 
 function App() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -62,7 +22,7 @@ function App() {
 	}, [firstNumber, secondNumber]);
 
 	return (
-		<div className="p-16 text-center">
+		<div className="p-16 flex justify-center align-middle text-center">
 			{!isOpen ? (
 				<FirstView
 					onClick={handleClick}
