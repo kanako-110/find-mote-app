@@ -31,7 +31,10 @@ function App() {
 					error={error}
 				/>
 			) : (
-				<Result result={COUNTRY_CHOICE_MAP[choicesNumber]} />
+				<Result
+					result={COUNTRY_CHOICE_MAP[choicesNumber]}
+					setIsOpen={setIsOpen}
+				/>
 			)}
 		</div>
 	);

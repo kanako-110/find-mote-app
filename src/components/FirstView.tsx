@@ -28,7 +28,8 @@ export const FirstView = ({
 		//  それを２つ置くだけ。
 		<div>
 			<div className="w-auto h-auto p-4 bg-gray-800">
-				<h1 className="font-pacifico text-4xl uppercase text-lightenPink stroke-2 text-shadow-md ">
+				{/* TODO: text-color */}
+				<h1 className="font-pacifico text-4xl uppercase text-red-600 stroke-2 text-shadow-md ">
 					Lets find your MOTE-country
 				</h1>
 			</div>
