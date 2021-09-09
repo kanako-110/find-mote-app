@@ -19,7 +19,7 @@ interface MapType {
 	[key: string]: resultType;
 }
 
-export const COUNTRY_CHOICE_MAP: MapType = {
+export const countryChoiceMap: MapType = {
 	110: {
 		country: 'China',
 		img: ChinaImg,

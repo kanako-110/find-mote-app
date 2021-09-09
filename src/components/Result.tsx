@@ -6,14 +6,14 @@ import { default as BackIcon } from '@material-ui/icons/Replay';
 
 interface Props {
 	result: resultType;
-	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
 	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
 	setSecondNumber: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export const Result = ({
 	result,
-	setIsOpen,
+	setIsSubmitted,
 	setFirstNumber,
 	setSecondNumber,
 }: Props) => {
@@ -22,7 +22,7 @@ export const Result = ({
 		setFirstNumber('');
 		setSecondNumber('');
 
-		setIsOpen(false);
+		setIsSubmitted(false);
 	};
 
 	return (

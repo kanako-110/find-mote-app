@@ -9,9 +9,6 @@ module.exports = {
 			fontFamily: {
 				pacifico: ['"Pacifico"', 'cursive'],
 			},
-			textColor: {
-				lightenPink: lighten('#EC4899', 0.25),
-			},
 		},
 	},
 	variants: {

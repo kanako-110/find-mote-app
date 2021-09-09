@@ -1,14 +1,6 @@
-// TODO: 命名
-
 import { Button } from './atoms/Button';
-import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
-import {
-	Radio,
-	FormControlLabel,
-	RadioGroup,
-	FormHelperText,
-} from '@material-ui/core';
+import { FormHelperText } from '@material-ui/core';
 import { Selection } from './Selection';
 
 const selections = [
@@ -43,8 +35,6 @@ export const FirstView = ({
 	error,
 }: Props) => {
 	return (
-		// TODO:  mapにして、上から情報わたすだけにする。
-		//  それを２つ置くだけ。
 		<div>
 			<div className="w-auto h-auto p-4 bg-gray-800">
 				{/* TODO: text-color */}
@@ -62,7 +52,9 @@ export const FirstView = ({
 				<FormControl component="fieldset" error={error}>
 					<div className="my-8">
 						<Selection onChange={setFirstNumber} data={selections[0]} />
-						<Selection onChange={setSecondNumber} data={selections[1]} />
+						<div className="mt-4">
+							<Selection onChange={setSecondNumber} data={selections[1]} />
+						</div>
 						{error && (
 							<FormHelperText>
 								必ず体格と性格を１つずつ選択してください

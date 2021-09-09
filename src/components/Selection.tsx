@@ -12,16 +12,14 @@ interface Props {
 		options: {
 			label: string;
 			value: string;
-		}[]; //型他でも使うならそこ？
+		}[];
 	};
 }
 
 export const Selection = ({ onChange, data }: Props) => {
 	return (
 		<>
-			<FormLabel component="legend" className="mt-2">
-				{data.formLabel}
-			</FormLabel>
+			<FormLabel>{data.formLabel}</FormLabel>
 			<RadioGroup onChange={(e) => onChange(e.target.value)}>
 				{data.options.map((option) => (
 					<FormControlLabel
