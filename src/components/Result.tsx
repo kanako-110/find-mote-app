@@ -7,9 +7,23 @@ import { default as BackIcon } from '@material-ui/icons/Replay';
 interface Props {
 	result: resultType;
 	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
+	setSecondNumber: React.Dispatch<React.SetStateAction<string>>;
 }
 
-export const Result = ({ result, setIsOpen }: Props) => {
+export const Result = ({
+	result,
+	setIsOpen,
+	setFirstNumber,
+	setSecondNumber,
+}: Props) => {
+
+	const handleClick = () => {
+		setFirstNumber('');
+		setSecondNumber('');
+		setIsOpen(false);
+	};
+
 	return (
 		<div style={{ width: 320 }}>
 			<img
@@ -32,7 +46,7 @@ export const Result = ({ result, setIsOpen }: Props) => {
 				</a>
 				<div className="mt-6">
 					<IconButton
-						onClick={() => setIsOpen(false)}
+						onClick={handleClick}
 						aria-label="戻るボタン"
 						color="primary"
 						className="w-6 h-6"

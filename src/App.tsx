@@ -34,6 +34,8 @@ function App() {
 				<Result
 					result={COUNTRY_CHOICE_MAP[choicesNumber]}
 					setIsOpen={setIsOpen}
+					setFirstNumber={setFirstNumber}
+					setSecondNumber={setSecondNumber}
 				/>
 			)}
 		</div>
