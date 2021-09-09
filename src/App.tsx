@@ -8,8 +8,7 @@ function App() {
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [firstNumber, setFirstNumber] = useState<string>('');
 	const [secondNumber, setSecondNumber] = useState<string>('');
-	const [error, setError] = React.useState(false);
-
+	const [error, setError] = useState(false);
 	const totalNumber = firstNumber + secondNumber;
 
 	const handleClick = useCallback(() => {

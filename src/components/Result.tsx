@@ -3,6 +3,7 @@ import { Button } from './atoms/Button';
 import { resultType } from '../data';
 import { IconButton } from '@material-ui/core';
 import { default as BackIcon } from '@material-ui/icons/Replay';
+import { motion } from 'framer-motion';
 
 interface Props {
 	result: resultType;
@@ -38,13 +39,17 @@ export const Result = ({
 			</h2>
 			<p className="mt-6">{result.description} </p>
 			<div className="mt-6 text-center flex flex-col">
-				<a href={result.link}>
+				<motion.a
+					animate={{ rotate: [0, 5, -5, 0] }}
+					transition={{ duration: 2 }}
+					href={result.link}
+				>
 					<Button
 						label={'会いに行く'}
 						variant={'contained'}
 						className="w-full"
 					/>
-				</a>
+				</motion.a>
 				<div className="mt-6">
 					<IconButton
 						onClick={handleClick}
