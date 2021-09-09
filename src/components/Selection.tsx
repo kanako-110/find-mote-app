@@ -6,8 +6,8 @@ import {
 } from '@material-ui/core';
 
 interface Props {
-	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
-	selection: {
+	onChange: React.Dispatch<React.SetStateAction<string>>;
+	data: {
 		formLabel: string;
 		options: {
 			label: string;
@@ -16,14 +16,14 @@ interface Props {
 	};
 }
 
-export const Selections = ({ setFirstNumber, selection }: Props) => {
+export const Selection = ({ onChange, data }: Props) => {
 	return (
 		<>
 			<FormLabel component="legend" className="mt-2">
-				{selection.formLabel}
+				{data.formLabel}
 			</FormLabel>
-			<RadioGroup onChange={(e) => setFirstNumber(e.target.value)}>
-				{selection.options.map((option) => (
+			<RadioGroup onChange={(e) => onChange(e.target.value)}>
+				{data.options.map((option) => (
 					<FormControlLabel
 						control={<Radio />}
 						label={option.label}

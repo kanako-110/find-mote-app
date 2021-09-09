@@ -9,16 +9,26 @@ import {
 	RadioGroup,
 	FormHelperText,
 } from '@material-ui/core';
-import { Selections } from './Selections';
+import { Selection } from './Selection';
 
-const selection = {
-	formLabel: '１番近い体格を選んでください',
-	options: [
-		{ label: '細め', value: '1' },
-		{ label: 'ぽっちゃり', value: '2' },
-		{ label: 'グラマラス', value: '3' },
-	],
-};
+const selections = [
+	{
+		formLabel: '１番近い体格を選んでください',
+		options: [
+			{ label: '細め', value: '1' },
+			{ label: 'ぽっちゃり', value: '2' },
+			{ label: 'グラマラス', value: '3' },
+		],
+	},
+	{
+		formLabel: '１番近い性格を選んでください',
+		options: [
+			{ label: '知的', value: '10' },
+			{ label: '陽気', value: '20' },
+			{ label: '家庭的', value: '30' },
+		],
+	},
+];
 interface Props {
 	onClick: () => void;
 	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
@@ -47,31 +57,17 @@ export const FirstView = ({
 				<br />
 				なんてことは絶対ありません。質問に２つ答えるだけであなたのモテ期を始めましょう。
 			</p>
+
 			<form>
 				<FormControl component="fieldset" error={error}>
 					<div className="my-8">
-						<Selections setFirstNumber={setFirstNumber} selection={selection} />
-						<FormLabel component="legend" className="mt-4">
-							１番近い性格を選んでください
-						</FormLabel>
-						<RadioGroup
-							onChange={(e) => setSecondNumber(e.target.value)}
-							className="mt-2"
-						>
-							<FormControlLabel
-								control={<Radio />}
-								label="知的"
-								name="smart"
-								value="10"
-							/>
-							<FormControlLabel control={<Radio />} label="陽気" value="20" />
-							<FormControlLabel control={<Radio />} label="家庭的" value="30" />
-							{error && (
-								<FormHelperText>
-									必ず体格と性格を１つずつ選択してください
-								</FormHelperText>
-							)}
-						</RadioGroup>
+						<Selection onChange={setFirstNumber} data={selections[0]} />
+						<Selection onChange={setSecondNumber} data={selections[1]} />
+						{error && (
+							<FormHelperText>
+								必ず体格と性格を１つずつ選択してください
+							</FormHelperText>
+						)}
 					</div>
 					<Button
 						onClick={onClick}
