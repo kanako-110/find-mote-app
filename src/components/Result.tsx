@@ -17,10 +17,11 @@ export const Result = ({
 	setFirstNumber,
 	setSecondNumber,
 }: Props) => {
-
 	const handleClick = () => {
+		// 選択肢のリセット
 		setFirstNumber('');
 		setSecondNumber('');
+
 		setIsOpen(false);
 	};
 

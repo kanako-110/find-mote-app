@@ -19,7 +19,9 @@ function App() {
 		}
 
 		setIsOpen(true);
-	}, [firstNumber, secondNumber]);
+		// 以前エラーになっていた場合は、そのstateが残っているのでリセットする
+		error && setError(false);
+	}, [error, firstNumber, secondNumber]);
 
 	return (
 		<div className="px-16 py-6 flex justify-center align-middle text-center sm:py-16 ">
