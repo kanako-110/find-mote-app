@@ -19,7 +19,7 @@ export const Result = ({ result, setIsOpen }: Props) => {
 				alt="あなたに合う国の男性写真サンプル"
 			/>
 			<h2 className="mt-6 text-4xl font-bold text-center text-red-600">
-				{result.country}{' '}
+				{result.country}
 			</h2>
 			<p className="mt-6">{result.description} </p>
 			<div className="mt-6 text-center flex flex-col">

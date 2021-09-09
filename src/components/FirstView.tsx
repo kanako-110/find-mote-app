@@ -9,7 +9,16 @@ import {
 	RadioGroup,
 	FormHelperText,
 } from '@material-ui/core';
+import { Selections } from './Selections';
 
+const selection = {
+	formLabel: '１番近い体格を選んでください',
+	options: [
+		{ label: '細め', value: '1' },
+		{ label: 'ぽっちゃり', value: '2' },
+		{ label: 'グラマラス', value: '3' },
+	],
+};
 interface Props {
 	onClick: () => void;
 	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
@@ -41,30 +50,7 @@ export const FirstView = ({
 			<form>
 				<FormControl component="fieldset" error={error}>
 					<div className="my-8">
-						<FormLabel component="legend" className="mt-2">
-							１番近い体格を選んでください
-						</FormLabel>
-						<RadioGroup onChange={(e) => setFirstNumber(e.target.value)}>
-							{/* ハートもできる */}
-							<FormControlLabel
-								control={<Radio />}
-								label="細め"
-								name="slender"
-								value="1"
-							/>
-							<FormControlLabel
-								control={<Radio />}
-								label="ぽっちゃり"
-								name="chubby"
-								value="2"
-							/>
-							<FormControlLabel
-								control={<Radio />}
-								label="グラマラス"
-								name="glamorous"
-								value="3"
-							/>
-						</RadioGroup>
+						<Selections setFirstNumber={setFirstNumber} selection={selection} />
 						<FormLabel component="legend" className="mt-4">
 							１番近い性格を選んでください
 						</FormLabel>
