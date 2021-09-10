@@ -8,15 +8,15 @@ import AmericaCanadaImg from './images/americanMan.png';
 import BrazilImg from './images/brazilianMan.png';
 import ThaiNepalImg from './images/thaiMan.png';
 
-export type resultType = {
+export interface ResultType {
 	country: string;
 	img: string; //optionalとる
 	description: string;
 	link: string;
-};
+}
 
 interface MapType {
-	[key: string]: resultType;
+	[key: string]: ResultType;
 }
 
 export const countryChoiceMap: MapType = {
@@ -87,3 +87,30 @@ export const countryChoiceMap: MapType = {
 		link: 'https://www.jal.co.jp/intltour/asi/thkh/',
 	},
 };
+
+export const selections = [
+	{
+		formLabel: '１番近い体格を選んでください',
+		options: [
+			{ label: '細め', value: '1' },
+			{ label: 'ぽっちゃり', value: '2' },
+			{ label: 'グラマラス', value: '3' },
+		],
+	},
+	{
+		formLabel: '１番近い性格を選んでください',
+		options: [
+			{ label: '知的', value: '10' },
+			{ label: '陽気', value: '20' },
+			{ label: '家庭的', value: '30' },
+		],
+	},
+];
+
+export interface SelectionType {
+	formLabel: string;
+	options: {
+		label: string;
+		value: string;
+	}[];
+}

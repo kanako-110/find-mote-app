@@ -2,46 +2,31 @@ import { Button } from './atoms/Button';
 import FormControl from '@material-ui/core/FormControl';
 import { FormHelperText } from '@material-ui/core';
 import { Selection } from './Selection';
+import { motion } from 'framer-motion';
+import { SelectionType } from '../data';
 
-const selections = [
-	{
-		formLabel: '１番近い体格を選んでください',
-		options: [
-			{ label: '細め', value: '1' },
-			{ label: 'ぽっちゃり', value: '2' },
-			{ label: 'グラマラス', value: '3' },
-		],
-	},
-	{
-		formLabel: '１番近い性格を選んでください',
-		options: [
-			{ label: '知的', value: '10' },
-			{ label: '陽気', value: '20' },
-			{ label: '家庭的', value: '30' },
-		],
-	},
-];
 interface Props {
 	onClick: () => void;
-	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
-	setSecondNumber: React.Dispatch<React.SetStateAction<string>>;
 	error: boolean;
+	selections: SelectionType[];
+	setFormData: React.Dispatch<React.SetStateAction<string[]>>;
+	updateSelections: (index: number, value: string) => void;
 }
 
 export const FirstView = ({
 	onClick,
-	setFirstNumber,
-	setSecondNumber,
 	error,
+	selections,
+	updateSelections,
 }: Props) => {
 	return (
 		<div>
-			<div className="w-auto h-auto p-4 bg-gray-800">
+			<motion.div className="w-auto h-auto p-4 bg-gray-800">
 				{/* TODO: text-color */}
 				<h1 className="font-pacifico text-3xl uppercase text-red-600 stroke-2 text-shadow-md sm:text-4xl ">
 					Lets find your MOTE-country
 				</h1>
-			</div>
+			</motion.div>
 			<p className="mt-6">
 				モテない
 				<br />
@@ -50,17 +35,22 @@ export const FirstView = ({
 
 			<form>
 				<FormControl component="fieldset" error={error}>
-					<div className="my-8">
-						<Selection onChange={setFirstNumber} data={selections[0]} />
-						<div className="mt-4">
-							<Selection onChange={setSecondNumber} data={selections[1]} />
-						</div>
+					<div className="my-4">
+						{/* Todo: styling */}
+						{selections.map((selection, index) => (
+							<Selection
+								onChange={updateSelections}
+								data={selection}
+								index={index}
+							/>
+						))}
 						{error && (
 							<FormHelperText>
 								必ず体格と性格を１つずつ選択してください
 							</FormHelperText>
 						)}
 					</div>
+					{/* disable */}
 					<Button
 						onClick={onClick}
 						label={'モテにいく'}

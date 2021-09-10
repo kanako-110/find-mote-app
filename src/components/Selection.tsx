@@ -6,7 +6,6 @@ import {
 } from '@material-ui/core';
 
 interface Props {
-	onChange: React.Dispatch<React.SetStateAction<string>>;
 	data: {
 		formLabel: string;
 		options: {
@@ -14,21 +13,24 @@ interface Props {
 			value: string;
 		}[];
 	};
+	onChange: (index: number, value: string) => void;
+	index: number;
 }
 
-export const Selection = ({ onChange, data }: Props) => {
+export const Selection = ({ onChange, data, index }: Props) => {
 	return (
-		<>
+		<div className="p-4">
 			<FormLabel>{data.formLabel}</FormLabel>
-			<RadioGroup onChange={(e) => onChange(e.target.value)}>
+			<RadioGroup onChange={(e) => onChange(index, e.target.value)}>
 				{data.options.map((option) => (
 					<FormControlLabel
 						control={<Radio />}
 						label={option.label}
 						value={option.value}
+						id={option.value}
 					/>
 				))}
 			</RadioGroup>
-		</>
+		</div>
 	);
 };

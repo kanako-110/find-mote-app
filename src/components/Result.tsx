@@ -1,28 +1,20 @@
-import React from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { Button } from './atoms/Button';
-import { resultType } from '../data';
+import { ResultType } from '../data';
 import { IconButton } from '@material-ui/core';
 import { default as BackIcon } from '@material-ui/icons/Replay';
 import { motion } from 'framer-motion';
 
 interface Props {
-	result: resultType;
+	result: ResultType;
 	setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
-	setFirstNumber: React.Dispatch<React.SetStateAction<string>>;
-	setSecondNumber: React.Dispatch<React.SetStateAction<string>>;
+	setFormData: Dispatch<SetStateAction<string[]>>;
 }
 
-export const Result = ({
-	result,
-	setIsSubmitted,
-	setFirstNumber,
-	setSecondNumber,
-}: Props) => {
+export const Result = ({ result, setIsSubmitted, setFormData }: Props) => {
 	const handleClick = () => {
 		// 選択肢のリセット
-		setFirstNumber('');
-		setSecondNumber('');
-
+		setFormData([]);
 		setIsSubmitted(false);
 	};
 
@@ -39,6 +31,7 @@ export const Result = ({
 			</h2>
 			<p className="mt-6">{result.description} </p>
 			<div className="mt-6 text-center flex flex-col">
+				{/* 時間空けてからやる */}
 				<motion.a
 					animate={{ rotate: [0, 5, -5, 0] }}
 					transition={{ duration: 2 }}
