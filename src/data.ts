@@ -1,12 +1,12 @@
-import PolandImg from './images/polishMan.png';
-import ChinaImg from './images/chineseMan.png';
-import RussiaImg from './images/russiaMan.png';
-import ItalyImg from './images/italianMan.png';
-import SamoaImg from './images/samoaMan.png';
-import IndiaImg from './images/indianMan.png';
-import AmericaCanadaImg from './images/americanMan.png';
-import BrazilImg from './images/brazilianMan.png';
-import ThaiNepalImg from './images/thaiMan.png';
+import PolandImg from './images/polish.avif';
+import ChinaImg from './images/chinese.avif';
+import RussiaImg from './images/russia.avif';
+import ItalyImg from './images/italiy.avif';
+import SamoaImg from './images/samoa.avif';
+import IndiaImg from './images/indian.avif';
+import AmericaCanadaImg from './images/american.avif';
+import BrazilImg from './images/brazilian.avif';
+import ThaiNepalImg from './images/thai.avif';
 
 export interface ResultType {
 	country: string;
