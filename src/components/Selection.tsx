@@ -19,7 +19,7 @@ interface Props {
 
 export const Selection = ({ onChange, data, index }: Props) => {
 	return (
-		<div className="p-4">
+		<div className="py-2">
 			<FormLabel>{data.formLabel}</FormLabel>
 			<RadioGroup onChange={(e) => onChange(index, e.target.value)}>
 				{data.options.map((option) => (
