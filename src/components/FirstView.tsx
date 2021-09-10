@@ -1,13 +1,12 @@
 import { Button } from './atoms/Button';
 import FormControl from '@material-ui/core/FormControl';
-import { FormHelperText } from '@material-ui/core';
 import { Selection } from './Selection';
 import { motion } from 'framer-motion';
 import { SelectionType } from '../data';
 
 interface Props {
 	onClick: () => void;
-	error: boolean;
+	disabled: boolean;
 	selections: SelectionType[];
 	setFormData: React.Dispatch<React.SetStateAction<string[]>>;
 	updateSelections: (index: number, value: string) => void;
@@ -15,8 +14,8 @@ interface Props {
 
 export const FirstView = ({
 	onClick,
-	error,
 	selections,
+	disabled,
 	updateSelections,
 }: Props) => {
 	return (
@@ -34,7 +33,7 @@ export const FirstView = ({
 			</p>
 
 			<form>
-				<FormControl component="fieldset" error={error}>
+				<FormControl component="fieldset">
 					<div className="my-4">
 						{/* Todo: styling */}
 						{selections.map((selection, index) => (
@@ -44,17 +43,12 @@ export const FirstView = ({
 								index={index}
 							/>
 						))}
-						{error && (
-							<FormHelperText>
-								必ず体格と性格を１つずつ選択してください
-							</FormHelperText>
-						)}
 					</div>
-					{/* disable */}
 					<Button
 						onClick={onClick}
 						label={'モテにいく'}
 						variant={'contained'}
+						disabled={disabled}
 					/>
 				</FormControl>
 			</form>

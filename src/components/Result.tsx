@@ -15,6 +15,7 @@ export const Result = ({ result, setIsSubmitted, setFormData }: Props) => {
 	const handleClick = () => {
 		// 選択肢のリセット
 		setFormData([]);
+
 		setIsSubmitted(false);
 	};
 

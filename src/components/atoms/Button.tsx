@@ -6,14 +6,15 @@ interface Props {
 	label: string;
 	variant: 'contained' | 'text' | 'outlined';
 	className?: string;
+	disabled?: boolean;
 }
-export const Button = ({ onClick, label, variant, className }: Props) => {
+export const Button = ({ onClick, label, className, ...props }: Props) => {
 	return (
 		<MuiButton
 			onClick={onClick}
-			variant={variant}
 			color="primary"
 			className={className}
+			{...props}
 		>
 			{label}
 		</MuiButton>
