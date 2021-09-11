@@ -90,7 +90,7 @@ export const countryChoiceMap: MapType = {
 
 export const selections = [
 	{
-		formLabel: '１番近い体格を選んでください',
+		formLabel: 'あなたに1番近い体格を選んでください',
 		options: [
 			{ label: '細め', value: '1' },
 			{ label: 'ぽっちゃり', value: '2' },
@@ -98,7 +98,7 @@ export const selections = [
 		],
 	},
 	{
-		formLabel: '１番近い性格を選んでください',
+		formLabel: 'あなたに1番近い性格を選んでください',
 		options: [
 			{ label: '知的', value: '10' },
 			{ label: '陽気', value: '20' },

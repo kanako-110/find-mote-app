@@ -21,14 +21,14 @@ export const FirstView = ({
 	return (
 		<div>
 			<motion.div className="w-auto h-auto p-4 bg-gray-800">
-				<h1 className="font-pacifico text-3xl uppercase text-red-600 stroke-2 text-shadow-md sm:text-4xl ">
+				<h1 className="font-pacifico text-3xl uppercase text-pink-600 stroke-2 text-shadow-md sm:text-4xl ">
 					Lets find your MOTE-country
 				</h1>
 			</motion.div>
 			<p className="mt-6">
 				モテない
 				<br />
-				なんてことは絶対ありません。質問に２つ答えるだけであなたのモテ期を始めましょう。
+				なんてことは絶対ありません。質問に2つ答えてあなたのモテる国を見つけましょう。
 			</p>
 
 			<form>

@@ -21,9 +21,9 @@ function App() {
 		setFormData(newFormData);
 	};
 
-	const handleClick = useCallback(() => {
+	const handleClick = () => {
 		setIsSubmitted(true);
-	}, []);
+	};
 
 	return (
 		<div className="px-16 py-6 flex justify-center align-middle text-center sm:py-16 ">
