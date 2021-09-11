@@ -36,6 +36,7 @@ export const FirstView = ({
 					<div className="my-4">
 						{selections.map((selection, index) => (
 							<Selection
+								key={selection.id}
 								onChange={updateSelections}
 								data={selection}
 								index={index}

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Result } from './components/Result';
-import { useCallback } from 'react';
 import { FirstView } from './components/FirstView';
 import { countryChoiceMap } from './data';
 import { selections } from './data';

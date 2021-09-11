@@ -24,6 +24,7 @@ export const Selection = ({ onChange, data, index }: Props) => {
 			<RadioGroup onChange={(e) => onChange(index, e.target.value)}>
 				{data.options.map((option) => (
 					<FormControlLabel
+						key={option.value}
 						control={<Radio />}
 						label={option.label}
 						value={option.value}
