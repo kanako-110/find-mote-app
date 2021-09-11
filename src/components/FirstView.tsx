@@ -1,6 +1,5 @@
 import FormControl from '@material-ui/core/FormControl';
 import { Selection } from './Selection';
-import { motion } from 'framer-motion';
 import { SelectionType } from '../data';
 import { Button } from './atoms/Button';
 
@@ -20,11 +19,11 @@ export const FirstView = ({
 }: Props) => {
 	return (
 		<div>
-			<motion.div className="w-auto h-auto p-4 bg-gray-800">
+			<div className="w-auto h-auto p-4 bg-gray-800">
 				<h1 className="font-pacifico text-3xl uppercase text-pink-600 stroke-2 text-shadow-md sm:text-4xl ">
 					Lets find your MOTE-country
 				</h1>
-			</motion.div>
+			</div>
 			<p className="mt-6">
 				モテない
 				<br />
