@@ -7,10 +7,13 @@ import { selections } from './data';
 
 function App() {
 	const [isSubmitted, setIsSubmitted] = useState(false);
-	const [formData, setFormData] = useState<string[]>([]);
+
+	const initialValue = Array(selections.length).fill('0');
+	const [formData, setFormData] = useState<string[]>(initialValue);
+
 	const totalNumber = formData.join('');
 
-	const disabled = formData.length !== selections.length;
+	const disabled = formData.includes('0');
 
 	const updateSelections = (index: number, value: string) => {
 		const newFormData = formData.slice();
@@ -37,6 +40,7 @@ function App() {
 					result={countryChoiceMap[totalNumber]}
 					setIsSubmitted={setIsSubmitted}
 					setFormData={setFormData}
+					initialValue={initialValue}
 				/>
 			)}
 		</div>

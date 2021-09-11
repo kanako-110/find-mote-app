@@ -1,8 +1,8 @@
-import { Button } from './atoms/Button';
 import FormControl from '@material-ui/core/FormControl';
 import { Selection } from './Selection';
 import { motion } from 'framer-motion';
 import { SelectionType } from '../data';
+import { Button } from './atoms/Button';
 
 interface Props {
 	onClick: () => void;
@@ -42,12 +42,7 @@ export const FirstView = ({
 							/>
 						))}
 					</div>
-					<Button
-						onClick={onClick}
-						label={'モテにいく'}
-						variant={'contained'}
-						disabled={disabled}
-					/>
+					<Button label={'モテにいく'} disabled={disabled} onClick={onClick} />
 				</FormControl>
 			</form>
 		</div>

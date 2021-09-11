@@ -3,18 +3,23 @@ import { Button } from './atoms/Button';
 import { ResultType } from '../data';
 import { IconButton } from '@material-ui/core';
 import { default as BackIcon } from '@material-ui/icons/Replay';
-import { motion } from 'framer-motion';
 
 interface Props {
 	result: ResultType;
 	setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
 	setFormData: Dispatch<SetStateAction<string[]>>;
+	initialValue: '0'[];
 }
 
-export const Result = ({ result, setIsSubmitted, setFormData }: Props) => {
+export const Result = ({
+	result,
+	setIsSubmitted,
+	setFormData,
+	initialValue,
+}: Props) => {
 	const handleClick = () => {
 		// 選択肢のリセット
-		setFormData([]);
+		setFormData(initialValue);
 
 		setIsSubmitted(false);
 	};
@@ -32,18 +37,19 @@ export const Result = ({ result, setIsSubmitted, setFormData }: Props) => {
 			</h2>
 			<p className="mt-6">{result.description} </p>
 			<div className="mt-6 text-center flex flex-col">
-				{/* 時間空けてからやる */}
-				<motion.a
-					animate={{ rotate: [0, 5, -5, 0] }}
-					transition={{ duration: 2 }}
-					href={result.link}
-				>
+				<a href={result.link}>
 					<Button
 						label={'会いに行く'}
-						variant={'contained'}
-						className="w-full"
+						animate={{
+							scale: [1, 1.1, 1],
+							transition: {
+								delay: 2,
+								repeat: 1,
+								repeatDelay: 1,
+							},
+						}}
 					/>
-				</motion.a>
+				</a>
 				<div className="mt-6">
 					<IconButton
 						onClick={handleClick}
