@@ -24,25 +24,31 @@ export const FirstView = ({
 					Lets find your MOTE-country
 				</h1>
 			</div>
-			<p className="mt-6">
+			<p className="mt-8">
 				モテない
 				<br />
 				なんてことは絶対ありません。質問に2つ答えてあなたのモテる国を見つけましょう。
 			</p>
 
-			<form>
+			<form className="mt-4">
 				<FormControl component="fieldset">
-					<div className="my-4">
-						{selections.map((selection, index) => (
+					{selections.map((selection, index) => (
+						<div className="mt-4">
 							<Selection
 								key={selection.id}
 								onChange={updateSelections}
 								data={selection}
 								index={index}
 							/>
-						))}
+						</div>
+					))}
+					<div className="mt-8">
+						<Button
+							label={'モテにいく'}
+							disabled={disabled}
+							onClick={onClick}
+						/>
 					</div>
-					<Button label={'モテにいく'} disabled={disabled} onClick={onClick} />
 				</FormControl>
 			</form>
 		</div>

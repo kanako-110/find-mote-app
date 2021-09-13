@@ -20,7 +20,7 @@ export const Button = ({ label, onClick, disabled, ...props }: Props) => {
 		<>
 			{disabled ? (
 				<motion.button
-					className={`bg-green-900 bg-opacity-25 ${buttonCss}`}
+					className={`bg-green-900 bg-opacity-25 text-opacity-40 ${buttonCss}`}
 					{...props}
 				>
 					{label}
