@@ -3,7 +3,6 @@ import { Selection } from './Selection';
 import { SelectionType } from '../data';
 import { Button } from './atoms/Button';
 import { motion } from 'framer-motion';
-import { blue } from '@material-ui/core/colors';
 
 interface Props {
 	onClick: () => void;
