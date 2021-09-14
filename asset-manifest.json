@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/find-mote-app/static/css/main.8a310eb5.chunk.css",
-    "main.js": "/find-mote-app/static/js/main.89d35ffe.chunk.js",
-    "main.js.map": "/find-mote-app/static/js/main.89d35ffe.chunk.js.map",
+    "main.css": "/find-mote-app/static/css/main.bb693a7a.chunk.css",
+    "main.js": "/find-mote-app/static/js/main.49a920c0.chunk.js",
+    "main.js.map": "/find-mote-app/static/js/main.49a920c0.chunk.js.map",
     "runtime-main.js": "/find-mote-app/static/js/runtime-main.ae387d74.js",
     "runtime-main.js.map": "/find-mote-app/static/js/runtime-main.ae387d74.js.map",
-    "static/js/2.e0597f3e.chunk.js": "/find-mote-app/static/js/2.e0597f3e.chunk.js",
-    "static/js/2.e0597f3e.chunk.js.map": "/find-mote-app/static/js/2.e0597f3e.chunk.js.map",
+    "static/js/2.a9ddd4f5.chunk.js": "/find-mote-app/static/js/2.a9ddd4f5.chunk.js",
+    "static/js/2.a9ddd4f5.chunk.js.map": "/find-mote-app/static/js/2.a9ddd4f5.chunk.js.map",
     "static/js/3.edf86153.chunk.js": "/find-mote-app/static/js/3.edf86153.chunk.js",
     "static/js/3.edf86153.chunk.js.map": "/find-mote-app/static/js/3.edf86153.chunk.js.map",
     "index.html": "/find-mote-app/index.html",
-    "static/css/main.8a310eb5.chunk.css.map": "/find-mote-app/static/css/main.8a310eb5.chunk.css.map",
-    "static/js/2.e0597f3e.chunk.js.LICENSE.txt": "/find-mote-app/static/js/2.e0597f3e.chunk.js.LICENSE.txt",
+    "static/css/main.bb693a7a.chunk.css.map": "/find-mote-app/static/css/main.bb693a7a.chunk.css.map",
+    "static/js/2.a9ddd4f5.chunk.js.LICENSE.txt": "/find-mote-app/static/js/2.a9ddd4f5.chunk.js.LICENSE.txt",
     "static/media/american.674203f5.avif": "/find-mote-app/static/media/american.674203f5.avif",
     "static/media/brazilian.26697b71.avif": "/find-mote-app/static/media/brazilian.26697b71.avif",
     "static/media/chinese.d9dcd856.avif": "/find-mote-app/static/media/chinese.d9dcd856.avif",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ae387d74.js",
-    "static/js/2.e0597f3e.chunk.js",
-    "static/css/main.8a310eb5.chunk.css",
-    "static/js/main.89d35ffe.chunk.js"
+    "static/js/2.a9ddd4f5.chunk.js",
+    "static/css/main.bb693a7a.chunk.css",
+    "static/js/main.49a920c0.chunk.js"
   ]
 }
