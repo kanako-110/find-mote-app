@@ -10,7 +10,7 @@ import ThaiNepalImg from './images/thai.avif';
 
 export interface ResultType {
 	country: string;
-	img: string; //optionalとる
+	img: string;
 	description: string;
 	link: string;
 }
@@ -19,6 +19,7 @@ interface MapType {
 	[key: string]: ResultType;
 }
 
+// keyは、ユーザーが選ぶ選択肢の合計値に値する。
 export const countryChoiceMap: MapType = {
 	110: {
 		country: 'China',
@@ -88,6 +89,9 @@ export const countryChoiceMap: MapType = {
 	},
 };
 
+// 結果を表示する際、選択されたvalueの合計値が使われる。
+// 合計値が重なることをさけるために、valueは1-9までの間で0を付け足すように指定していく。
+// 例：選択肢１{value1:1, value2:2 value3: 3,... value9: 9} 選択肢2{value1:10, value2:20 value3: 30,... value9: 90}, 選択肢3{value1:100, value2:200, value3: 300, ... value9: 900}
 export const selections = [
 	{
 		id: 1,
