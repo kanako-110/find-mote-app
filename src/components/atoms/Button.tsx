@@ -18,6 +18,7 @@ const buttonCss =
 export const Button = ({ label, onClick, disabled, ...props }: Props) => {
 	return (
 		<>
+			{/* onTapのときのいろ */}
 			{disabled ? (
 				<motion.button
 					className={`bg-green-900 bg-opacity-25 text-opacity-40 ${buttonCss}`}
@@ -27,7 +28,7 @@ export const Button = ({ label, onClick, disabled, ...props }: Props) => {
 				</motion.button>
 			) : (
 				<motion.button
-					className={` bg-green-500 ${buttonCss}`}
+					className={`bg-green-500 ${buttonCss}`}
 					whileTap={{ scale: 0.9 }}
 					onTap={onClick}
 					{...props}
