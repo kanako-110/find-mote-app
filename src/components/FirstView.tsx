@@ -8,8 +8,8 @@ interface Props {
 	onClick: () => void;
 	disabled: boolean;
 	selections: SelectionType[];
-	setFormData: React.Dispatch<React.SetStateAction<string[]>>;
-	updateSelections: (index: number, value: string) => void;
+	setFormData: React.Dispatch<React.SetStateAction<number[]>>;
+	updateSelections: (index: number, value: number) => void;
 }
 
 export const FirstView = ({
