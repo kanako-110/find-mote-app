@@ -4,15 +4,10 @@ import {
 	Radio,
 	RadioGroup,
 } from '@material-ui/core';
+import { SelectionType } from '../data';
 
 interface Props {
-	data: {
-		formLabel: string;
-		options: {
-			label: string;
-			value: string;
-		}[];
-	};
+	data: SelectionType;
 	onChange: (index: number, value: string) => void;
 	index: number;
 }
