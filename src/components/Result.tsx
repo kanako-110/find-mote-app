@@ -7,8 +7,8 @@ import { default as BackIcon } from '@material-ui/icons/Replay';
 interface Props {
 	result: ResultType;
 	setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
-	setFormData: Dispatch<SetStateAction<number[]>>;
-	initialValue: 0[];
+	setFormData: Dispatch<SetStateAction<string[]>>;
+	initialValue: '0'[];
 }
 
 export const Result = ({
