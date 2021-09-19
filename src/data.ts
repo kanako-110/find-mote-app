@@ -6,7 +6,16 @@ import SamoaImg from './images/samoa.avif';
 import IndiaImg from './images/indian.avif';
 import AmericaCanadaImg from './images/american.avif';
 import BrazilImg from './images/brazilian.avif';
-import ThaiNepalImg from './images/thai.avif';
+import ThaiImg from './images/thai.avif';
+import ChineseWomanImg from './images/chinesewoman.avif';
+import ThaiWomanImg from './images/thaiwoman.avif';
+import KoreanWomanImg from './images/koreanwoman.avif';
+import SamoaWomanImg from './images/samoawoman.avif';
+import PolandWomanImg from './images/polandwoman.avif';
+import PhilippinesWomanImg from './images/Philippinewoman.avif';
+import AmericaWomanImg from './images/americawoman.avif';
+import FranceWomanImg from './images/francewoman.avif';
+import BrazilWomanImg from './images/francewoman.avif';
 
 export interface ResultType {
 	country: string;
@@ -79,10 +88,64 @@ export const countryChoiceMap: MapType = {
 	},
 	FemaleGlamorousHomemaker: {
 		country: 'Thai',
-		img: ThaiNepalImg,
+		img: ThaiImg,
 		description:
 			'女性にとにかく優しいタイ男子。合格です。アプローチが積極的で、家族を大切にします。細かいことは気にしない人が多いです。合言葉はマイペンライ（タイ語で大丈夫、問題ない）。',
 		link: 'https://www.jal.co.jp/intltour/asi/thkh/',
+	},
+	MaleSlenderSmart: {
+		country: 'China',
+		img: ChineseWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleSlenderCheerful: {
+		country: 'Thai',
+		img: ThaiWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleSlenderHomemaker: {
+		country: 'Korea',
+		img: KoreanWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleChubbySmart: {
+		country: 'Samoa',
+		img: SamoaWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleChubbyCheerful: {
+		country: 'Poland',
+		img: PolandWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleChubbyHomemaker: {
+		country: 'The Philippines',
+		img: PhilippinesWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleGlamorousSmart: {
+		country: 'America',
+		img: AmericaWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleGlamorousCheerful: {
+		country: 'Brazil',
+		img: BrazilWomanImg,
+		description: '',
+		link: '',
+	},
+	MaleGlamorousHomemaker: {
+		country: 'France',
+		img: FranceWomanImg,
+		description: '',
+		link: '',
 	},
 };
 
