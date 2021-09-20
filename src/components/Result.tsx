@@ -3,6 +3,7 @@ import { Button } from './atoms/Button';
 import { ResultType } from '../data';
 import { IconButton } from '@material-ui/core';
 import { default as BackIcon } from '@material-ui/icons/Replay';
+import { motion } from 'framer-motion';
 
 interface Props {
 	result: ResultType;
@@ -43,14 +44,19 @@ export const Result = ({
 						animate={{
 							scale: [1, 1.1, 1],
 							transition: {
-								delay: 2,
+								delay: 4,
 								repeat: 1,
-								repeatDelay: 1,
+								repeatDelay: 2,
 							},
 						}}
 					/>
 				</a>
-				<div className="mt-6">
+				<motion.div
+					className="mt-6"
+					whileHover={{
+						rotate: -30,
+					}}
+				>
 					<IconButton
 						onClick={handleClick}
 						aria-label="戻るボタン"
@@ -59,7 +65,7 @@ export const Result = ({
 					>
 						<BackIcon />
 					</IconButton>
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	);
