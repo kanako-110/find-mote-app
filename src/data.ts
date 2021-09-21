@@ -139,7 +139,7 @@ export const countryChoiceMap: MapType = {
 		country: 'Poland',
 		img: PolandWomanImg,
 		description:
-			'かわいい・美人な人が多いポーランド。宗教色の強い国なので、その点への理解が必要です。その分、謙虚で真面目な人が多いです。小柄な人が多いのも特徴的です。',
+			'かわいい・美人な人が多いポーランド。宗教色の強い国なので、その点への理解が必要です。その分、謙虚で真面目な人が多いです。小柄な人が多いのもポイント。',
 		link: POLAND_LINK,
 	},
 	MaleChubbyHomemaker: {
@@ -153,7 +153,7 @@ export const countryChoiceMap: MapType = {
 		country: 'America',
 		img: AmericaWomanImg,
 		description:
-			'主張がハッキリしており、自分の感情をストレートに表現するアメリカ女性。掃除は得意ですが、料理が苦手な人が多いので、一緒に料理すると良さそうです。',
+			'主張がハッキリしていて、自分の感情をストレートに表現するアメリカ女性。掃除は得意ですが、料理が苦手な人が多いので、一緒に料理すると良さそうです。',
 		link: AMERICA_LINK,
 	},
 	MaleGlamorousCheerful: {
@@ -167,7 +167,7 @@ export const countryChoiceMap: MapType = {
 		country: 'France',
 		img: FranceWomanImg,
 		description:
-			'主張がハッキリしており、自分の感情をストレートに表現するフランス女性。マナーがしっかりしており、品があるのも特徴的です。北フランスと南フランスで性格が異なり、南はオープンで楽観的などラテン気質が強いです。一方、北は思索や議論を好む人が多く知的な女性が多いです。自分のタイプに合わせて見てみると良いでしょう。',
+			'主張がハッキリしていて、自分の感情をストレートに表現するフランス女性。マナーがしっかりしていて、品があるのも特徴的です。北フランスと南フランスで性格が異なり、南はオープンで楽観的などラテン気質が強いです。一方、北は思索や議論を好む人が多く知的な女性が多いです。自分のタイプに合わせて見てみると良いでしょう。',
 		link: FRANCE_LINK,
 	},
 };
