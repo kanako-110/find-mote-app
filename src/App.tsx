@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { Result } from './components/Result';
-import { FirstView } from './components/FirstView';
+import { FirstViewTemplate } from './components/FirstViewTemplate';
 import { choiceCountryMap } from './data';
 import { selections } from './data';
 
@@ -36,11 +36,10 @@ function App() {
 	return (
 		<div className="min-h-screen p-8 flex justify-center items-center text-center">
 			{!isSubmitted ? (
-				<FirstView
-					onClick={() => setIsSubmitted(true)}
+				<FirstViewTemplate
+					onSubmit={() => setIsSubmitted(true)}
+					onRadioButtonChange={updateSelections}
 					selections={selections}
-					setFormData={setFormData}
-					updateSelections={updateSelections}
 					disabled={disabled}
 				/>
 			) : (
