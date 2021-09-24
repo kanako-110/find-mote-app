@@ -7,8 +7,8 @@ import { selections } from './data';
 function App() {
 	const [isSubmitted, setIsSubmitted] = useState(false);
 
-	// todo: useMemo?
-	const initialValue = Array(selections.length).fill('0');
+	const initialValue = useMemo(() => Array(selections.length).fill('0'), []);
+
 	const [formData, setFormData] = useState<string[]>(initialValue);
 
 	// TODO: -, _
