@@ -27,9 +27,6 @@ function App() {
 		setFormData(newFormData);
 	};
 
-	// TODO: no need to use handleClick?
-	const handleClick = () => setIsSubmitted(true);
-
 	// TODO: callback
 	const resetData = () => {
 		setFormData(initialValue);
@@ -41,7 +38,7 @@ function App() {
 		<div className="min-h-screen p-8 flex justify-center items-center text-center">
 			{!isSubmitted ? (
 				<FirstView
-					onClick={handleClick}
+					onClick={() => setIsSubmitted(true)}
 					selections={selections}
 					setFormData={setFormData}
 					updateSelections={updateSelections}
