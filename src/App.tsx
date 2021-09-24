@@ -11,8 +11,7 @@ function App() {
 
 	const [formData, setFormData] = useState<string[]>(initialValue);
 
-	// TODO: -, _
-	const totalValue = formData.join('');
+	const totalValue = formData.join('_');
 
 	// now: rendered on ever render => 必要な時だけレンダーされる方法は？:選択肢全てそろったときのみとか。 note:memoだとresultではレンダーされない
 	const disabled = useMemo(() => {

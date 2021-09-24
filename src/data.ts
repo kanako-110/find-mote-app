@@ -45,127 +45,126 @@ const PHILIPPINES_LINK = 'https://www.jal.co.jp/intltour/asi/phmy/';
 
 // keyは、ユーザーが選ぶ選択肢の合計値に値する。
 export const choiceCountryMap: MapType = {
-	// TODO: non capital => - or _
-	FemaleSlenderSmart: {
+	female_slender_smart: {
 		country: 'China',
 		img: ChinaImg,
 		description:
 			'自分に自信があり、堂々としている中国男子。女性に優しく、家族も大事にします。',
 		link: CHINA_LINK,
 	},
-	FemaleSlenderCheerful: {
+	female_slender_cheerful: {
 		country: 'Italy',
 		img: ItalyImg,
 		description:
 			'陽気で楽観的な人が多いイタリア男子。何に対してもこだわりが強い・マザコン多めという一面もありますが、その分好きなことにエネルギッシュで人との繋がりを大切にします。',
 		link: ITALY_LINK,
 	},
-	FemaleSlenderHomemaker: {
+	female_slender_homemaker: {
 		country: 'Russia',
 		img: RussiaImg,
 		description:
 			'一見冷たそうに見えて、陽気で涙もろいなど感情豊かなロシア男子。喜怒哀楽の怒の部分もしっかり忘れずに、キレやすい一面もあります。イメージ通りお酒好きが多いので、初デートは飲み行くので決まりです。',
 		link: RUSSIA_LINK,
 	},
-	FemaleChubbySmart: {
+	female_chubby_smart: {
 		country: 'Poland',
 		img: PolandImg,
 		description:
 			'努力家が多く謙虚なポーランド男子。富裕層が多いのもポイント。信仰心が強い人も多いため、日本人女子はその点を理解しておくと良さそう。',
 		link: POLAND_LINK,
 	},
-	FemaleChubbyCheerful: {
+	female_chubby_cheerful: {
 		country: 'Samoa',
 		img: SamoaImg,
 		description:
 			'体格が良く、喧嘩が強いサモア男子。頼りになりますね。強いだけでなく、陽気でフレンドリーでもあります。視力がめちゃくちゃいいです。遠くからでも見つけてくれそう！',
 		link: SAMOA_LINK,
 	},
-	FemaleChubbyHomemaker: {
+	female_chubby_homemaker: {
 		country: 'India',
 		img: IndiaImg,
 		description:
 			'陽気でフレンドリー、話すことが大好きな人が多いです。ちょっと無口なあなたにピッタリ！！頭がいい、家族を大切にするのも特徴です。大ざっぱなところがあるので、几帳面のあなたには要チェックポイントです。',
 		link: INDIA_LINK,
 	},
-	FemaleGlamorousSmart: {
+	female_glamorous_smart: {
 		country: 'America',
 		img: AmericaCanadaImg,
 		description:
 			'オープンでフレンドリーなアメリカ男子。女性を優先するジェントルマンなところも超魅力的。感情表現もストレートで、細かいことは気にしません。スポーツ好きが多いので、初デートはスポーツ観戦でもいいかも！',
 		link: AMERICA_LINK,
 	},
-	FemaleGlamorousCheerful: {
+	female_glamorous_cheerful: {
 		country: 'Brazil',
 		img: BrazilImg,
 		description:
 			'イケメンが多いで有名なブラジル男子。とにかく明るく、積極的、ロマンチストなのが特徴的です。マイペースな一面もあり、ゆったり陽気なあなたと相性抜群！',
 		link: BRAZIL_LINK,
 	},
-	FemaleGlamorousHomemaker: {
+	female_glamorous_homemaker: {
 		country: 'Thai',
 		img: ThaiImg,
 		description:
 			'女性にとにかく優しいタイ男子。合格です。アプローチが積極的で、家族を大切にします。細かいことは気にしない人が多いです。合言葉はマイペンライ（タイ語で大丈夫、問題ない）。',
 		link: THAI_LINK,
 	},
-	MaleSlenderSmart: {
+	male_slender_smart: {
 		country: 'China',
 		img: ChineseWomanImg,
 		description:
 			'自分のことをストレートに表現し、素直な人が多い中国人女性。家族をとても大切にするのも特徴です。将来の生活や結婚を意識できる男性と交際したがる傾向があるので、そこをアピールできると良さそうです！！',
 		link: CHINA_LINK,
 	},
-	MaleSlenderCheerful: {
+	male_slender_cheerful: {
 		country: 'Thai',
 		img: ThaiWomanImg,
 		description:
 			'スタイルが良く美意識の高いタイ女子。整形している人も多いため、気になる人は気を付けましょう。面倒見が良く、とことん尽くしてくれます。絶対に自分からは謝らない一面もあるため、喧嘩したら是非あなたから謝ってあげてくさい。',
 		link: THAI_LINK,
 	},
-	MaleSlenderHomemaker: {
+	male_slender_homemaker: {
 		country: 'Korea',
 		img: KoreanWomanImg,
 		description:
 			'言わずもがな、美意識の高く美人・肌のきれいな人が多いコレアンガール。愛情深く、仲良くなると家族のように親身になってくれます。やきもち屋さんが多いので、プレイボーイなあなたは気を付けて！',
 		link: KOREA_LINK,
 	},
-	MaleChubbySmart: {
+	male_chubby_smart: {
 		country: 'Samoa',
 		img: SamoaWomanImg,
 		description:
 			'温厚で楽観的なサモア女性。のんびりとしています。その分いい加減な面もあります。どこの村出身か気にするので、あなたの出身地を言えるようにしておきましょう。',
 		link: SAMOA_LINK,
 	},
-	MaleChubbyCheerful: {
+	male_chubby_cheerful: {
 		country: 'Poland',
 		img: PolandWomanImg,
 		description:
 			'かわいい・美人な人が多いポーランド。宗教色の強い国なので、その点への理解が必要です。その分、謙虚で真面目な人が多いです。小柄な人が多いのもポイント。',
 		link: POLAND_LINK,
 	},
-	MaleChubbyHomemaker: {
+	male_chubby_homemaker: {
 		country: 'The Philippines',
 		img: PhilippinesWomanImg,
 		description:
 			'明るくフレンドリーなフィリピン女子。ホスピタリティ精神が高く、初対面の人にも親切で明るく接してくれるので会話に困る事なしです！。家族に何かあったときは仕事を休むのが普通なほど家族思いです。',
 		link: PHILIPPINES_LINK,
 	},
-	MaleGlamorousSmart: {
+	male_glamorousS_smart: {
 		country: 'America',
 		img: AmericaWomanImg,
 		description:
 			'主張がハッキリしていて、自分の感情をストレートに表現するアメリカ女性。掃除は得意ですが、料理が苦手な人が多いので、一緒に料理すると良さそうです。',
 		link: AMERICA_LINK,
 	},
-	MaleGlamorousCheerful: {
+	male_glamorous_cheerful: {
 		country: 'Brazil',
 		img: BrazilWomanImg,
 		description:
 			'とてもロマンチックで愛情表現豊かなブラジル女性。フレンドリーでポジティブなのも特徴です。ロマンチストが多いため、サプライズをして喜ばせてあげましょう。',
 		link: BRAZIL_LINK,
 	},
-	MaleGlamorousHomemaker: {
+	male_glamorous_homemaker: {
 		country: 'France',
 		img: FranceWomanImg,
 		description:
@@ -188,26 +187,26 @@ export const selections = [
 		id: 0,
 		formLabel: 'あなたの性別を選んでください',
 		options: [
-			{ label: '女性', value: 'Female' },
-			{ label: '男性', value: 'Male' },
+			{ label: '女性', value: 'female' },
+			{ label: '男性', value: 'male' },
 		],
 	},
 	{
 		id: 1,
 		formLabel: 'あなたに1番近い体格を選んでください',
 		options: [
-			{ label: '細め', value: 'Slender' },
-			{ label: 'ぽっちゃり', value: 'Chubby' },
-			{ label: 'グラマラス・ 筋肉質', value: 'Glamorous' },
+			{ label: '細め', value: 'slender' },
+			{ label: 'ぽっちゃり', value: 'chubby' },
+			{ label: 'グラマラス・ 筋肉質', value: 'glamorous' },
 		],
 	},
 	{
 		id: 2,
 		formLabel: 'あなたに1番近い性格を選んでください',
 		options: [
-			{ label: '知的・真面目・堂々としてる', value: 'Smart' },
-			{ label: '陽気・明るい', value: 'Cheerful' },
-			{ label: '家庭的・優しい', value: 'Homemaker' },
+			{ label: '知的・真面目・堂々としてる', value: 'smart' },
+			{ label: '陽気・明るい', value: 'cheerful' },
+			{ label: '家庭的・優しい', value: 'homemaker' },
 		],
 	},
 ];
