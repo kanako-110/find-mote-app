@@ -1,4 +1,4 @@
-import { SelectionType } from '../data';
+import { SelectionType } from '../types';
 import { Title } from './Title';
 import { SelectionsForm } from './SelectionsForm';
 interface Props {

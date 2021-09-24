@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResultType } from '../data';
+import { ResultType } from '../types';
 import { ResultDescription } from './ResultDescription';
 import { ResultBottom } from './ResultBottom';
 

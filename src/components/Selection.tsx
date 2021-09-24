@@ -4,7 +4,7 @@ import {
 	Radio,
 	RadioGroup,
 } from '@material-ui/core';
-import { SelectionType } from '../data';
+import { SelectionType } from '../types';
 
 interface Props {
 	data: SelectionType;

@@ -1,5 +1,5 @@
 import FormControl from '@material-ui/core/FormControl';
-import { SelectionType } from '../data';
+import { SelectionType } from '../types';
 import { Button } from './atoms/Button';
 import { Selection } from './Selection';
 

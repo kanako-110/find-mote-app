@@ -16,18 +16,7 @@ import PhilippinesWomanImg from './images/Philippinewoman.avif';
 import AmericaWomanImg from './images/americawoman.avif';
 import FranceWomanImg from './images/francewoman.avif';
 import BrazilWomanImg from './images/francewoman.avif';
-
-// TODO: type folder
-export interface ResultType {
-	country: string;
-	img: string;
-	description: string;
-	link: string;
-}
-
-interface MapType {
-	[key: string]: ResultType;
-}
+import { MapType } from './types';
 
 const BRAZIL_LINK = 'https://www.jal.co.jp/intltour/ame/index.html';
 const CHINA_LINK = 'https://www.jal.co.jp/intltour/chn/index.html';
@@ -172,15 +161,6 @@ export const choiceCountryMap: MapType = {
 		link: FRANCE_LINK,
 	},
 };
-
-export interface SelectionType {
-	id: number;
-	formLabel: string;
-	options: {
-		label: string;
-		value: string;
-	}[];
-}
 
 export const selections = [
 	{
