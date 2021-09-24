@@ -20,6 +20,8 @@ export const FirstView = ({
 }: Props) => {
 	return (
 		<div>
+			{/* TODO: herderらへんわける */}
+			{/*  分けたほうが見やすい、セレクションと意味合いが違うから分けて良さそう、分けたほうが何か変更したときにバグが置きずらそう*/}
 			<motion.div
 				className="w-auto h-auto p-4"
 				animate={{

@@ -7,30 +7,18 @@ import { motion } from 'framer-motion';
 
 interface Props {
 	result: ResultType;
-	setIsSubmitted: React.Dispatch<React.SetStateAction<boolean>>;
-	setFormData: Dispatch<SetStateAction<string[]>>;
-	initialValue: '0'[];
+	onReturnButtonClick: () => void;
 }
 
-export const Result = ({
-	result,
-	setIsSubmitted,
-	setFormData,
-	initialValue,
-}: Props) => {
-	const handleClick = () => {
-		// 選択肢のリセット
-		setFormData(initialValue);
-
-		setIsSubmitted(false);
-	};
-
+export const Result = ({ result, onReturnButtonClick }: Props) => {
 	return (
 		<div style={{ width: 320 }}>
+			{/* TODO: descあたりの分けたほうがよさそう。コンポーネント  */}
 			<img
 				className="mx-auto w-full object-cover"
 				style={{ height: 320 }}
 				src={result.img}
+				// TODO: alt の内容変更
 				alt="あなたに合う国の男性写真サンプル"
 			/>
 			<h2 className="mt-6 text-4xl font-bold text-center text-red-600">
@@ -58,7 +46,7 @@ export const Result = ({
 					}}
 				>
 					<IconButton
-						onClick={handleClick}
+						onClick={onReturnButtonClick}
 						aria-label="戻るボタン"
 						color="primary"
 						className="w-6 h-6"

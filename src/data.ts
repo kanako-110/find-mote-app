@@ -17,6 +17,7 @@ import AmericaWomanImg from './images/americawoman.avif';
 import FranceWomanImg from './images/francewoman.avif';
 import BrazilWomanImg from './images/francewoman.avif';
 
+// TODO: type folder
 export interface ResultType {
 	country: string;
 	img: string;
@@ -43,7 +44,8 @@ const KOREA_LINK = 'https://www.jal.co.jp/jp/ja/intltour/jaldp/sel/';
 const PHILIPPINES_LINK = 'https://www.jal.co.jp/intltour/asi/phmy/';
 
 // keyは、ユーザーが選ぶ選択肢の合計値に値する。
-export const countryChoiceMap: MapType = {
+export const choiceCountryMap: MapType = {
+	// TODO: non capital => - or _
 	FemaleSlenderSmart: {
 		country: 'China',
 		img: ChinaImg,
