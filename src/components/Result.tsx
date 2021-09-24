@@ -1,9 +1,10 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { Button } from './atoms/Button';
 import { ResultType } from '../data';
 import { IconButton } from '@material-ui/core';
 import { default as BackIcon } from '@material-ui/icons/Replay';
 import { motion } from 'framer-motion';
+import { ResultDescription } from './ResultDescription';
 
 interface Props {
 	result: ResultType;
@@ -13,18 +14,7 @@ interface Props {
 export const Result = ({ result, onReturnButtonClick }: Props) => {
 	return (
 		<div style={{ width: 320 }}>
-			{/* TODO: descあたりの分けたほうがよさそう。コンポーネント  */}
-			<img
-				className="mx-auto w-full object-cover"
-				style={{ height: 320 }}
-				src={result.img}
-				// TODO: alt の内容変更
-				alt="あなたに合う国の男性写真サンプル"
-			/>
-			<h2 className="mt-6 text-4xl font-bold text-center text-red-600">
-				{result.country}
-			</h2>
-			<p className="mt-6">{result.description} </p>
+			<ResultDescription result={result} />
 			<div className="mt-6 text-center flex flex-col">
 				<a href={result.link}>
 					<Button
