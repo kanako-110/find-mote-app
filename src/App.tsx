@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Result } from './components/Result';
+import { ResultTemplate } from './components/ResultTemplate';
 import { FirstViewTemplate } from './components/FirstViewTemplate';
 import { choiceCountryMap } from './data';
 import { selections } from './data';
@@ -43,7 +43,7 @@ function App() {
 					disabled={disabled}
 				/>
 			) : (
-				<Result
+				<ResultTemplate
 					//countryChoiceMapの中から、ユーザーが選択した合計値とkeyが一致するものを渡す
 					result={choiceCountryMap[totalValue]}
 					onReturnButtonClick={resetData}
