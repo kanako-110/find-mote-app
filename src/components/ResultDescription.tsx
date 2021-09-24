@@ -1,4 +1,4 @@
-import { ResultType } from '../data';
+import { ResultType } from '../types';
 
 interface Props {
 	result: ResultType;

@@ -13,7 +13,7 @@ function App() {
 
 	const totalValue = formData.join('_');
 
-	// now: rendered on ever render => 必要な時だけレンダーされる方法は？:選択肢全てそろったときのみとか。 note:memoだとresultではレンダーされない
+	// MEMO:now: rendered on ever render => 必要な時だけレンダーされる方法は？:選択肢全てそろったときのみとか。 note:memoだとresultではレンダーされない
 	const disabled = useMemo(() => {
 		return formData.includes('0');
 	}, [formData]);
