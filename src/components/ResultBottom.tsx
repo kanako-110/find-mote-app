@@ -1,8 +1,6 @@
 import { Button } from './atoms/Button';
 import { ResultType } from '../types';
-import { IconButton } from '@material-ui/core';
-import { default as BackIcon } from '@material-ui/icons/Replay';
-import { motion } from 'framer-motion';
+import { ReturnButton } from './atoms/ReturnButton';
 
 interface Props {
 	result: ResultType;
@@ -25,21 +23,7 @@ export const ResultBottom = ({ result, onReturnButtonClick }: Props) => {
 					}}
 				/>
 			</a>
-			<motion.div
-				className="mt-6"
-				whileHover={{
-					rotate: -30,
-				}}
-			>
-				<IconButton
-					onClick={onReturnButtonClick}
-					aria-label="戻るボタン"
-					color="primary"
-					className="w-6 h-6"
-				>
-					<BackIcon />
-				</IconButton>
-			</motion.div>
+			<ReturnButton onClick={onReturnButtonClick} />
 		</div>
 	);
 };
