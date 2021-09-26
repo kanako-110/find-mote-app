@@ -13,7 +13,6 @@ function App() {
 
 	const totalValue = formData.join('_');
 
-	// MEMO:now: rendered on ever render => 必要な時だけレンダーされる方法は？:選択肢全てそろったときのみとか。 note:memoだとresultではレンダーされない
 	const disabled = useMemo(() => {
 		return formData.includes('0');
 	}, [formData]);
@@ -26,7 +25,6 @@ function App() {
 		setFormData(newFormData);
 	};
 
-	// TODO: callback
 	const resetData = () => {
 		setFormData(initialValue);
 
