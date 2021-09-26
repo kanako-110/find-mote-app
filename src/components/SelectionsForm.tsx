@@ -20,9 +20,8 @@ export const SelectionsForm = ({
 		<form className="mt-4">
 			<FormControl component="fieldset">
 				{selections.map((selection, index) => (
-					<div className="mt-4">
+					<div key={selection.id} className="mt-4">
 						<Selection
-							key={selection.id}
 							onChange={onRadioButtonChange}
 							data={selection}
 							index={index}
