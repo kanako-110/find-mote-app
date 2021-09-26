@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/find-mote-app/static/css/main.bb693a7a.chunk.css",
-    "main.js": "/find-mote-app/static/js/main.3550334a.chunk.js",
-    "main.js.map": "/find-mote-app/static/js/main.3550334a.chunk.js.map",
+    "main.js": "/find-mote-app/static/js/main.aa859716.chunk.js",
+    "main.js.map": "/find-mote-app/static/js/main.aa859716.chunk.js.map",
     "runtime-main.js": "/find-mote-app/static/js/runtime-main.ae387d74.js",
     "runtime-main.js.map": "/find-mote-app/static/js/runtime-main.ae387d74.js.map",
     "static/js/2.e983ca4f.chunk.js": "/find-mote-app/static/js/2.e983ca4f.chunk.js",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.ae387d74.js",
     "static/js/2.e983ca4f.chunk.js",
     "static/css/main.bb693a7a.chunk.css",
-    "static/js/main.3550334a.chunk.js"
+    "static/js/main.aa859716.chunk.js"
   ]
 }
