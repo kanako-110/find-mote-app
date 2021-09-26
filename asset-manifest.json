@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/find-mote-app/static/css/main.bb693a7a.chunk.css",
-    "main.js": "/find-mote-app/static/js/main.41c86eaa.chunk.js",
-    "main.js.map": "/find-mote-app/static/js/main.41c86eaa.chunk.js.map",
+    "main.css": "/find-mote-app/static/css/main.7735ef13.chunk.css",
+    "main.js": "/find-mote-app/static/js/main.70d478a1.chunk.js",
+    "main.js.map": "/find-mote-app/static/js/main.70d478a1.chunk.js.map",
     "runtime-main.js": "/find-mote-app/static/js/runtime-main.ae387d74.js",
     "runtime-main.js.map": "/find-mote-app/static/js/runtime-main.ae387d74.js.map",
     "static/js/2.e983ca4f.chunk.js": "/find-mote-app/static/js/2.e983ca4f.chunk.js",
@@ -10,8 +10,9 @@
     "static/js/3.edf86153.chunk.js": "/find-mote-app/static/js/3.edf86153.chunk.js",
     "static/js/3.edf86153.chunk.js.map": "/find-mote-app/static/js/3.edf86153.chunk.js.map",
     "index.html": "/find-mote-app/index.html",
-    "static/css/main.bb693a7a.chunk.css.map": "/find-mote-app/static/css/main.bb693a7a.chunk.css.map",
+    "static/css/main.7735ef13.chunk.css.map": "/find-mote-app/static/css/main.7735ef13.chunk.css.map",
     "static/js/2.e983ca4f.chunk.js.LICENSE.txt": "/find-mote-app/static/js/2.e983ca4f.chunk.js.LICENSE.txt",
+    "static/media/404.ce293654.avif": "/find-mote-app/static/media/404.ce293654.avif",
     "static/media/Philippinewoman.329a3c6b.avif": "/find-mote-app/static/media/Philippinewoman.329a3c6b.avif",
     "static/media/american.674203f5.avif": "/find-mote-app/static/media/american.674203f5.avif",
     "static/media/americawoman.e99d4f67.avif": "/find-mote-app/static/media/americawoman.e99d4f67.avif",
@@ -33,7 +34,7 @@
   "entrypoints": [
     "static/js/runtime-main.ae387d74.js",
     "static/js/2.e983ca4f.chunk.js",
-    "static/css/main.bb693a7a.chunk.css",
-    "static/js/main.41c86eaa.chunk.js"
+    "static/css/main.7735ef13.chunk.css",
+    "static/js/main.70d478a1.chunk.js"
   ]
 }
