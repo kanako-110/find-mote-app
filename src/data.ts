@@ -139,7 +139,7 @@ export const choiceCountryMap: MapType = {
 			'明るくフレンドリーなフィリピン女子。ホスピタリティ精神が高く、初対面の人にも親切で明るく接してくれるので会話に困る事なしです！。家族に何かあったときは仕事を休むのが普通なほど家族思いです。',
 		link: PHILIPPINES_LINK,
 	},
-	male_glamorousS_smart: {
+	male_glamorous_smart: {
 		country: 'America',
 		img: AmericaWomanImg,
 		description:

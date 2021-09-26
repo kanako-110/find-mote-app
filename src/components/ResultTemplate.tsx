@@ -9,6 +9,7 @@ interface Props {
 }
 
 export const ResultTemplate = ({ result, onReturnButtonClick }: Props) => {
+	// error表示
 	return (
 		<div style={{ width: 320 }}>
 			<ResultDescription result={result} />
